@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": false,
+    "noUnusedLocals": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "webpack.base.ts", "webpack.dev.ts", "webpack.prod.ts", ],
+  "exclude": ["./src/__tests__/*", "./esm/*", "./lib/*"]
+}
