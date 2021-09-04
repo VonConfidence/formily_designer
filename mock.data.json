@@ -12,12 +12,13 @@
     "long": "4"
   },
   "parent": {
-    "language": [
-      1
-    ],
     "child": {
       "slider": 23
-    }
+    },
+    "language": [
+      "node",
+      "webpack"
+    ]
   },
   "list": [
     {
@@ -29,7 +30,11 @@
       "spu_switch": false
     }
   ],
-  "globalData": {
-    "show": false
+  "__global__data__": {
+    "list": {
+      "depKey": "parent.language.0",
+      "depValue": "node",
+      "pattern": "disabled"
+    }
   }
 }

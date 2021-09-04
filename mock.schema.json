@@ -178,13 +178,13 @@
             "enum": [
               {
                 "children": [],
-                "label": "node",
-                "value": 1
+                "label": "服务",
+                "value": "node"
               },
               {
                 "children": [],
-                "label": "webpack",
-                "value": 2
+                "label": "构建",
+                "value": "webpack"
               }
             ],
             "x-validator": [],
@@ -345,7 +345,7 @@
         }
       }
     },
-    "x-designable-id": "cgc3vdr7rev",
-    "x-designable-source-name": "cgc3vdr7rev"
+    "x-designable-id": "43eex00cn54",
+    "x-designable-source-name": "43eex00cn54"
   }
 }

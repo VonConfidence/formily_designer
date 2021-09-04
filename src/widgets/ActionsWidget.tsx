@@ -27,7 +27,7 @@ function transformEmptyStringToNull(data: any): any {
  * 根据数据路径获取对应的field
  * @param dataPathStr 数据的路径 比如后端返回的a.b.c list.1.skuCode (遵循formPath规范)
  */
-function getFieldFromPath(dataPathStr: string, formGraph): Field | null {
+export function getFieldFromPath(dataPathStr: string, formGraph): Field | null {
   const { allFormInputField } = getAllInputFieldsInfo(formGraph);
   return allFormInputField[dataPathStr] || null;
 }
