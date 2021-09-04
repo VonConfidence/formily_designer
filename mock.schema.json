@@ -1,0 +1,351 @@
+{
+  "form": {
+    "labelCol": 6,
+    "wrapperCol": 12
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "card_void": {
+        "type": "void",
+        "x-component": "Card",
+        "x-component-props": {
+          "title": "卡片布局"
+        },
+        "name": "card_void",
+        "x-designable-id": "vsvsx0rntb1",
+        "x-designable-source-name": "wfxcnth4a41",
+        "x-index": 0,
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "x-decorator": "FormItem",
+            "x-component": "Input",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {},
+            "x-designable-id": "bzi3sdy20pj",
+            "x-designable-source-name": "n34g4r795ad",
+            "x-index": 0,
+            "name": "name"
+          },
+          "gender": {
+            "title": "Gender",
+            "x-decorator": "FormItem",
+            "x-component": "TreeSelect",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {},
+            "x-designable-id": "q5od5s6kwrb",
+            "x-designable-source-name": "q86yb4mmarx",
+            "x-index": 1,
+            "name": "gender",
+            "enum": [
+              {
+                "children": [],
+                "label": "男",
+                "value": "boy"
+              },
+              {
+                "children": [],
+                "label": "女",
+                "value": "girl"
+              }
+            ]
+          },
+          "favorites": {
+            "title": "爱好",
+            "x-decorator": "FormItem",
+            "x-component": "Select",
+            "x-validator": [],
+            "x-component-props": {
+              "mode": "multiple"
+            },
+            "x-decorator-props": {},
+            "name": "favorites",
+            "enum": [
+              {
+                "children": [],
+                "label": "西瓜",
+                "value": "watermelon"
+              },
+              {
+                "children": [],
+                "label": "香蕉",
+                "value": "banana"
+              },
+              {
+                "children": [],
+                "label": "葡萄",
+                "value": "grape"
+              }
+            ],
+            "x-designable-id": "ntxtjilucbv",
+            "x-designable-source-name": "n3qpy939tmi",
+            "x-index": 2
+          },
+          "isMarrage": {
+            "type": "string | number",
+            "title": "Marriage",
+            "x-decorator": "FormItem",
+            "x-component": "Radio.Group",
+            "enum": [
+              {
+                "children": [],
+                "label": "已婚",
+                "value": 1
+              },
+              {
+                "children": [],
+                "label": "未婚",
+                "value": 2
+              }
+            ],
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {},
+            "name": "isMarrage",
+            "x-designable-id": "kz3lm8ynczn",
+            "x-designable-source-name": "73tecrz8lrl",
+            "x-index": 3
+          },
+          "body_test": {
+            "type": "object",
+            "x-validator": [],
+            "name": "body_test",
+            "x-designable-id": "a3nrcu77qtc",
+            "x-designable-source-name": "u4d05whao5j",
+            "x-index": 4,
+            "properties": {
+              "height": {
+                "title": "高",
+                "type": "string",
+                "x-decorator": "FormItem",
+                "x-component": "Input",
+                "x-validator": [],
+                "x-component-props": {},
+                "x-decorator-props": {},
+                "name": "height",
+                "x-designable-id": "w4fog06pk7x",
+                "x-designable-source-name": "a61rnl7nrto",
+                "x-index": 0
+              },
+              "width": {
+                "title": "宽",
+                "type": "string",
+                "x-decorator": "FormItem",
+                "x-component": "Input",
+                "x-validator": [],
+                "x-component-props": {},
+                "x-decorator-props": {},
+                "name": "width",
+                "x-designable-id": "mytcoi7qpe3",
+                "x-designable-source-name": "a61rnl7nrto",
+                "x-index": 1
+              },
+              "long": {
+                "title": "长",
+                "type": "string",
+                "x-decorator": "FormItem",
+                "x-component": "Input",
+                "x-validator": [],
+                "x-component-props": {},
+                "x-decorator-props": {},
+                "name": "long",
+                "x-designable-id": "zm19avtgrq8",
+                "x-designable-source-name": "a61rnl7nrto",
+                "x-index": 2
+              }
+            }
+          }
+        }
+      },
+      "parent": {
+        "type": "object",
+        "x-validator": [],
+        "name": "parent",
+        "title": "对象嵌套测试",
+        "x-designable-id": "utc08gv9b4b",
+        "x-designable-source-name": "yccw2nt4gve",
+        "x-index": 1,
+        "properties": {
+          "language": {
+            "type": "Array<string | number>",
+            "title": "学习",
+            "x-decorator": "FormItem",
+            "x-component": "Checkbox.Group",
+            "enum": [
+              {
+                "children": [],
+                "label": "node",
+                "value": 1
+              },
+              {
+                "children": [],
+                "label": "webpack",
+                "value": 2
+              }
+            ],
+            "x-validator": [],
+            "x-decorator-props": {},
+            "name": "language",
+            "x-designable-id": "lf5jjoplvko",
+            "x-designable-source-name": "ifp2g3n9o01",
+            "x-index": 0
+          },
+          "child": {
+            "type": "object",
+            "x-validator": [],
+            "name": "child",
+            "x-designable-id": "pxzfaxcmc68",
+            "x-designable-source-name": "yccw2nt4gve",
+            "x-index": 1,
+            "properties": {
+              "slider": {
+                "type": "number",
+                "title": "Slider",
+                "x-decorator": "FormItem",
+                "x-component": "Slider",
+                "x-validator": [],
+                "x-component-props": {},
+                "x-decorator-props": {},
+                "name": "slider",
+                "x-designable-id": "az8fnd27otj",
+                "x-designable-source-name": "3gywbap4qrd",
+                "x-index": 0
+              }
+            }
+          }
+        }
+      },
+      "card_2_void": {
+        "type": "void",
+        "x-component": "Card",
+        "x-component-props": {
+          "title": "卡片和自增"
+        },
+        "name": "card_2_void",
+        "x-designable-id": "5tvtshxekg4",
+        "x-designable-source-name": "j3m6jlpg4hb",
+        "x-index": 2,
+        "properties": {
+          "list": {
+            "type": "array",
+            "x-decorator": "FormItem",
+            "x-component": "ArrayTable",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {},
+            "name": "list",
+            "x-designable-id": "urqxfqr8md3",
+            "x-designable-source-name": "3l0smmcz9ki",
+            "x-index": 0,
+            "items": {
+              "type": "object",
+              "x-designable-id": "tmgn5659btq",
+              "x-designable-source-name": "tmgn5659btq",
+              "properties": {
+                "sku_column": {
+                  "type": "void",
+                  "x-component": "ArrayTable.Column",
+                  "x-component-props": {
+                    "title": "SKU"
+                  },
+                  "name": "sku_column",
+                  "x-designable-id": "f03mowmjlwx",
+                  "x-designable-source-name": "f03mowmjlwx",
+                  "x-index": 0,
+                  "properties": {
+                    "skucode": {
+                      "type": "string",
+                      "x-decorator": "FormItem",
+                      "x-component": "Input",
+                      "x-validator": [],
+                      "x-component-props": {},
+                      "x-decorator-props": {},
+                      "name": "skucode",
+                      "x-designable-id": "eemvowfojw1",
+                      "x-designable-source-name": "e9gw3c35aez",
+                      "x-index": 0
+                    }
+                  }
+                },
+                "spu_column": {
+                  "type": "void",
+                  "x-component": "ArrayTable.Column",
+                  "x-component-props": {
+                    "title": "SPU"
+                  },
+                  "name": "spu_column",
+                  "x-designable-id": "ukb8ukjnplb",
+                  "x-designable-source-name": "ukb8ukjnplb",
+                  "x-index": 1,
+                  "properties": {
+                    "spu_switch": {
+                      "type": "boolean",
+                      "x-decorator": "FormItem",
+                      "x-component": "Switch",
+                      "x-validator": [],
+                      "x-component-props": {},
+                      "x-decorator-props": {},
+                      "name": "spu_switch",
+                      "x-designable-id": "z24qn7eqfad",
+                      "x-designable-source-name": "7hjnrq0tvm1",
+                      "x-index": 0
+                    }
+                  }
+                },
+                "ftkjip5558b": {
+                  "type": "void",
+                  "x-component": "ArrayTable.Column",
+                  "x-component-props": {
+                    "title": "Title"
+                  },
+                  "x-designable-id": "ftkjip5558b",
+                  "x-designable-source-name": "ftkjip5558b",
+                  "x-index": 2,
+                  "properties": {
+                    "f2gifw8j56n": {
+                      "type": "void",
+                      "x-component": "ArrayTable.Remove",
+                      "x-designable-id": "f2gifw8j56n",
+                      "x-designable-source-name": "f2gifw8j56n",
+                      "x-index": 0
+                    },
+                    "1yiskwpakmv": {
+                      "type": "void",
+                      "x-component": "ArrayTable.MoveDown",
+                      "x-designable-id": "1yiskwpakmv",
+                      "x-designable-source-name": "1yiskwpakmv",
+                      "x-index": 1
+                    },
+                    "7slgn9t3t4t": {
+                      "type": "void",
+                      "x-component": "ArrayTable.MoveUp",
+                      "x-designable-id": "7slgn9t3t4t",
+                      "x-designable-source-name": "7slgn9t3t4t",
+                      "x-index": 2
+                    }
+                  }
+                }
+              }
+            },
+            "properties": {
+              "bbawxady2e2": {
+                "type": "void",
+                "title": "Addition",
+                "x-component": "ArrayTable.Addition",
+                "x-designable-id": "bbawxady2e2",
+                "x-designable-source-name": "bbawxady2e2",
+                "x-index": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "x-designable-id": "cgc3vdr7rev",
+    "x-designable-source-name": "cgc3vdr7rev"
+  }
+}

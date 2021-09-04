@@ -1,0 +1,35 @@
+{
+  "name": "123",
+  "gender": "boy",
+  "favorites": [
+    "watermelon",
+    "banana"
+  ],
+  "isMarrage": 1,
+  "body_test": {
+    "height": "2",
+    "width": "3",
+    "long": "4"
+  },
+  "parent": {
+    "language": [
+      1
+    ],
+    "child": {
+      "slider": 23
+    }
+  },
+  "list": [
+    {
+      "skucode": "234",
+      "spu_switch": true
+    },
+    {
+      "skucode": "345",
+      "spu_switch": false
+    }
+  ],
+  "globalData": {
+    "show": false
+  }
+}

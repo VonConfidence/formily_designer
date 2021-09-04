@@ -31,12 +31,20 @@ export const createDesignableForm = (options: IDesignableFormFactoryProps) => {
   const DesignableForm: React.FC<IFormLayoutProps> = observer((props) => {
     const prefix = usePrefix('designable-form')
     const form = useMemo(
-      () =>
-        createForm({
+      () => {
+        const tForm = createForm({
           designable: true,
-        }),
+        })
+        // tForm.createObjectField({
+        //   name: '__global_server_data__',
+        //   value: { a: 1, b: 2 }
+        // })
+        // .onMount()
+        return tForm;
+      },
       []
     )
+
     return (
       <FormComponent
         {...props}

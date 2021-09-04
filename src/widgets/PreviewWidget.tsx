@@ -81,8 +81,23 @@ export interface IPreviewWidgetProps {
   setShowSubmit?: (show: boolean) => void;
 }
 
+const fetchData = async () => {
+  const  data = await fetch('http://127.0.0.1:5500/mock.data.json').then(response => response.json());
+  return data;
+}
+
 export const PreviewWidget: React.FC<IPreviewWidgetProps> = forwardRef((props: any, ref: any) => {
   const form = useMemo(() => createForm(), [])
+
+  useMemo(async () => {
+    try {
+      const data = await fetchData();
+      form.setInitialValues(data);
+      form.setValues(data);
+    } catch (e) {
+    }
+  }, []);
+
   const { form: formProps, schema } = transformToSchema(props.tree, {
     designableFormName: 'Root',
     designableFieldName: 'DesignableField',

@@ -64,30 +64,44 @@ function getAllInputFieldsInfo(formGraph: any) {
  * @param form 表单对象 
  */
 function getFormValueWithStructure(form: Form): Record<string, any> {
-  const submitValue: any = {}
+  const submitValue: any =  {};
   // console.log(form.values)
   const formGraph = form.getFormGraph()
 
   const { paths, allFormInputField } = getAllInputFieldsInfo(formGraph)
+
+  console.group('test_1');
   console.log('paths')
   console.log(paths)
   console.log('allFormInputField')
   console.log(allFormInputField)
+  console.groupEnd();
 
   paths.forEach((key: string) => {
     const field = allFormInputField[key] as Field
-    console.log(
-      key,
-      typeof field.inputValue !== 'undefined' ? field.inputValue : 'field不存在'
-    )
     const filedPath = FormPath.parse(key)
-    const parentFieldPath = filedPath.parent()
-    if (parentFieldPath && !parentFieldPath.getIn(submitValue)) {
+    const parentFieldPath = filedPath.parent();
+    const fieldValue = filedPath.getIn(form.values);
+    // 如果formPath的值, 能够在form表单里面找到直接用现成的
+    if (fieldValue != null) {
+      console.group('formValueHasValue');
+      console.log(filedPath.toString())
+      console.log(fieldValue)
+      console.log(submitValue)
+      console.groupEnd();
+      filedPath.setIn(submitValue, fieldValue);
+    } else if (parentFieldPath && !parentFieldPath.getIn(submitValue)) {
+      // 如果都没有填写的话, 需要构建submitValue的对象结构
+      console.group('resetPath');
+      console.log('--------', key, parentFieldPath.toString(), submitValue)
+      console.groupEnd();
       parentFieldPath.setIn(submitValue, {})
-    }
-    // 对于一些不存在inputValue属性的, 比如VoidField等 没有inputValue属性
-    if (typeof field?.inputValue !== 'undefined') {
-      FormPath.setIn(submitValue, key, field.inputValue || '')
+    } else {
+      // 兼容: 初始化没有填写任何值的时候, 过滤对于一些不存在inputValue属性的, 比如VoidField等 没有inputValue属性
+      console.group('no inputValueKey');
+      console.log('no_key', key, field);
+      console.groupEnd();
+      FormPath.setIn(submitValue, key, fieldValue || field?.inputValue || field?.initialValue || '')
     }
   })
 
